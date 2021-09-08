@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact {% endblock title %}
+
+{% block body %}
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('./static/assets/img/contact-bg1.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>Contact Me</h1>
+                    <span class="subheading">Have questions? I have answers.
+                        <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you
+                            as soon
+                            as possible!</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content-->
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show "
+    style='width:580px; position:relative;right:-390px;' role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+
+<div class="container " style='width:500px;'>
+
+
+    <form method="post" action="/contact.html">
+        {% csrf_token %}
+        <!-- * * * * * * * * * * * * * * *-->
+        <!-- * * SB Forms Contact Form * *-->
+        <!-- * * * * * * * * * * * * * * *-->
+        <!-- This form is pre-integrated with SB Forms.-->
+        <!-- To make this form functional, sign up at-->
+        <!-- https://startbootstrap.com/solution/contact-forms-->
+        <!-- to get an API token!-->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" name="email" id="exampleFormControlInput1"
+                placeholder="name@example.com" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Contact no</label>
+            <input type="phone" class="form-control" name="phone" id="phone" placeholder="Enter your phone no" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
+            <textarea class="form-control" id="desc" name="desc" rows="2" required></textarea>
+        </div>
+
+        <button class="btn btn-success  mb-4" id="submitButton" type="submit" style='position:relative;right:-200px;'>
+            Send </button>
+
+    </form>
+
+</div>
+{% endblock body %}

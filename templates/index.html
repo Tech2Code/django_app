@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock title %}
+
+{% block body %}
+
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('./static/assets/img/home-bg1.jpg')">
+    <div class="container position-relative px-2 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-15">
+                <div class="site-heading">
+                    <h1>Travelling Blogs</h1>
+                    <span class="subheading"> By Keshav Kumar </span>
+                    <span class="subheading"> Welcome to my Travelling Blogs
+                        <p>Solo travel at its best is deliciously self-indulgent: eat whatever and whenever you want,
+                                spend as long or as little as you like in a place, skip famous sights, sign up for the
+                                super cheesy.</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content-->
+<div class="container px-2 px-lg-2">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-10">
+            <p><h3>Checkout my new blogs...</h3></p>
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a><img class="img-fluid" src="./static/assets/img/goa1.jpg" alt="..." /></a>
+                <a href="post.html">
+                    <h2 class="post-title">A weekend road trip from Bangalore to Goa and back</h2>
+                    <h3 class="post-subtitle">in Goa, India, Karnataka.</h3>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a>Solo Traveller</a>
+                    on April 11, 2020
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a><img class="img-fluid" src="./static/assets/img/hawa5.jpg" alt="..." /></a>
+                <a href="post2.html">
+                    <h2 class="post-title">Delhi to Jaipur Hawa Mahal Travel Blog</h2>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a href="#!">Solo Traveller</a>
+                    on August 17 , 2019
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a><img class="img-fluid" src="./static/assets/img/rishik.jpg" alt="..." /></a> <br><br>
+                <a href="post3.html">
+                    <h2 class="post-title">‘Yoga Capital of the World’, Rishikesh</h2>
+                    <h3 class="post-subtitle">Rishikesh is a small serene town famous for meditation and yoga. </h3>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a href="#!">Solo Traveller</a>
+                    on july 24, 2018
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
